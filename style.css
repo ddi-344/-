@@ -1,0 +1,30 @@
+p, div {
+background-color: red;
+}
+b,span {
+background-color: blue;
+}
+.block1 {
+    width: 100px;
+    height: 100px;
+    margin: 10px; 
+    /* расстояние между блоками */
+}
+.block2 {
+    width: 100px;
+    height: 100px;
+    margin: 10px; 
+    background-color: gray;
+}
+
+
+*{box-sizing: border-box;
+}
+span{display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    color: #fff;
+    font-size: 30px;
+padding: 20px;
+}
