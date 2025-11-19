@@ -9,24 +9,24 @@ jobs:
  build-and-test:
  runs-on: ubuntu-latest # Используем виртуализированную среду
  Ubuntu:
-steps:
- - name: Checkout code
-   uses: actions/checkout@v3 # Загружаем исходники проекта
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v3 # Загружаем исходники проекта
 
- - name: Set up Node.js environment
-   uses: actions/setup-node@v3
-   with:
-   node-version: '18' # Устанавливаем нужную версию Node.js
+  - name: Set up Node.js environment
+    uses: actions/setup-node@v3
+    with:
+    node-version: '18' # Устанавливаем нужную версию Node.js
 
- - name: Install dependencies
-   run: npm install # Установка зависимостей приложения
+  - name: Install dependencies
+    run: npm install # Установка зависимостей приложения
 
- - name: Run tests
-   run: npm test # Выполнение тестов приложения
+  - name: Run tests
+    run: npm test # Выполнение тестов приложения
 # ...
-   steps:
- - name: Deploy to Netlify
-   if: github.ref == 'refs/heads/main'
+    steps:
+  - name: Deploy to Netlify
+    if: github.ref == 'refs/heads/main'
    uses: netlify/actions/deploy@master
  env:
  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
