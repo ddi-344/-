@@ -8,7 +8,7 @@ on:
 jobs:
  build-and-test:
  runs-on: ubuntu-latest # Используем виртуализированную среду
- Ubuntu :
+ Ubuntu:
 steps:
  - name: Checkout code
    uses: actions/checkout@v3 # Загружаем исходники проекта
